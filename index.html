@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Étudiant en B.T.S. communication, j'ai imaginé ce site afin de
+    vous montrer tout mon savoir-faire à travers diverses créations.">
+    <meta name="keywords" content="M0NS Axel Balitout Graphisme Graphiste Image">
+
+    <meta property="og:title" content="Axel Balitout - Portfolio" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:profile:first_name" content="Axel" />
+    <meta property="og:profile:last_name" content="Balitout" />
+    <meta property="og:profile:username" content="M0NS" />
+    <meta property="og:profile:gender" content="male" />
+    <meta property="og:url" content="http://www.m0ns.fr/" />
+    <meta property="og:image" content="http://www.m0ns.fr/og-image.png" />
+    <meta
+      property="og:description"
+      content="Étudiant en B.T.S. communication, j'ai imaginé ce site afin de
+    vous montrer tout mon savoir-faire à travers diverses créations."
+    />
+
+    <title>Axel Balitout - Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="./src/scss/vendor/materialdesignicons/materialdesignicons.scss"
+    />
+    <link rel="stylesheet" href="./src/scss/vendor/normalize.scss" />
+    <link rel="stylesheet" href="./src/scss/vendor/flexboxgrid.scss" />
+
+    <link rel="stylesheet" href="./src/scss/index.scss" />
+
+    <link rel="preload" as="image" href="./src/images/logo.png" />
+    <link rel="preload" as="image" href="./src/images/m0ns.png" />
+
+    <script type="module" src="./src/typescript/index.ts"></script>
+  </head>
+  <body class="light">
+    <header class="background-image">
+      <div class="dark-sail">
+        <div class="centered-card">
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="./src/images/logo.png"
+                id="spoing-image"
+                alt="Le logo de m0ns"
+                tabindex="0"
+              />
+            </div>
+
+            <div class="card-content fade-in">
+              <h1 class="card-title">Axel Balitout</h1>
+              <p class="card-paragraph">
+                Étudiant en B.T.S. communication, j'ai imaginé ce site afin de
+                vous montrer tout mon savoir-faire à travers diverses créations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="centered-arrow">
+          <button class="arrow" id="arrow">
+            <span class="mdi mdi-chevron-down"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="who-am-i">
+        <div class="row about-me">
+          <div class="col-md-5 col-12 section-image">
+            <img src="./src/images/logo.png" alt="" />
+          </div>
+          <div class="col-md-7 col-12 section-content">
+            <h2>À propos de moi</h2>
+            <p class="section-paragraph">
+              Étudiant en B.T.S. communication, j'ai imaginé ce site afin de
+              vous montrer tout mon savoir-faire à travers diverses créations.
+            </p>
+            <p class="section-paragraph">
+              Du logotype au design de page web, en passant par l'illustration
+              voire même de la programmation, j'espère pouvoir transmettre ma
+              passion pour la créativité au monde qui m'entoure.
+            </p>
+            <p class="section-paragraph">
+              Je travaille depuis une dizaine d'années sur les logiciels de la
+              suite Adobe tel que Photoshop, Illustrator et InDesign, mais aussi
+              sur Clip Studio Paint et Adobe XD depuis peu.
+            </p>
+          </div>
+        </div>
+        
+      </section>
+      <section class="my-creations">
+        <div class="container">
+          <h2>Mes Créations</h2>
+
+          <div id="creations-container" class="hidden">
+
+            <div id="categories"></div>
+
+            <div id="sub-categories" class="hidden"></div>
+
+            <div id="images" class="grid">
+            </div>
+
+          </div>
+
+          <div id="loading" class="alert loading">
+            <div class="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <h3>Chargement des images...</h3>
+          </div>
+          <div id="error" class="alert error hidden">
+            <div class="icon"><span class="mdi mdi-emoticon-poop"></span></div>
+            <h3 id="error-message">
+              Une erreur est survenue lors du chargement.
+            </h3>
+          </div>
+          
+          <div id="no-image" class="alert no-image hidden">
+            <div class="icon"><span class="mdi mdi-emoticon-sad"></span></div>
+            <h3 id="no-image-message">
+              Il n'y a aucune image ici.
+            </h3>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+
+      <p>Fait avec amour par <a href="mailto:bongibault.romain@gmail.com" target="_blank">82.111.109.49#7180</a></p>
+
+    </footer>
+
+  </body>
+</html>

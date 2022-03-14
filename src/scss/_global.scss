@@ -1,0 +1,444 @@
+/* purgecss start ignore */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 3px;
+}
+
+h2 {
+  color: map-get($map: map-get($themes, "light"), $key: "title");
+}
+
+header {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  &.background-image {
+    background-image: url("./../images/m0ns.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  > .dark-sail {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    background-color: rgba($color: #000000, $alpha: 0.5);
+
+    display: flex;
+
+    flex-direction: column;
+
+    > .centered-card {
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      > .card {
+        width: 60%;
+        display: flex;
+        position: relative;
+
+        > .card-image {
+          width: 30%;
+          padding: 20px;
+          animation: left-side-opacity 1s ease-in 0s 1 forwards normal;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          > img {
+            width: 100%;
+            border-radius: 100%;
+            box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.5);
+            transition: transform 0.5s;
+            outline: 0;
+
+            &:hover {
+              transform: scale(1.1);
+              cursor: pointer;
+            }
+
+            &:active {
+              transition-duration: 0.3s;
+              transform: scaleY(0.6) scaleX(1.1);
+            }
+          }
+        }
+
+        > .card-content {
+          color: white;
+          padding: 20px;
+          margin-left: 40px;
+          width: 70%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          > h1.card-title {
+            position: relative;
+            display: block;
+            text-transform: capitalize;
+            animation: opacity 1s ease-in 0s 1 forwards normal;
+            font-size: 2.5em;
+            margin-top: 0;
+
+            &::after {
+              background-color: #136bff;
+              content: "";
+              width: 0;
+              position: absolute;
+              height: 4px;
+              left: 0;
+              right: 0;
+              bottom: -15px;
+              border-radius: 6px;
+              animation: underline 1s ease-in 0.3s 1 forwards normal;
+            }
+          }
+
+          > p.card-paragraph {
+            opacity: 0;
+            animation: opacity 1s ease-in 0.3s 1 forwards normal;
+          }
+        }
+      }
+    }
+
+    > .centered-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > .arrow {
+        color: white;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        padding: 10px;
+        margin: 25px 0;
+        animation: hearth-bounce 2s linear 0s infinite forwards normal;
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes left-side-opacity {
+  0% {
+    opacity: 0;
+    margin-left: -50px;
+    margin-right: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@keyframes hearth-bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.section-content {
+  // width: 65%;
+  padding: 100px 100px;
+  padding-left: 0;
+  // flex-direction: column;
+
+  > h2 {
+    width: 100%;
+  }
+
+  > p {
+    margin: 0;
+  }
+}
+
+.section-image {
+  padding: 40px 100px;
+  padding-right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 80%;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.section-paragraph {
+  padding: 20px 15px;
+  text-indent: 5%;
+  line-height: 1.5em;
+}
+
+.my-creations {
+  background-color: #eae8f5;
+}
+
+.container {
+  width: 75%;
+  padding: 40px 0;
+
+  margin: auto;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: map-get($map: map-get($themes, "light"), $key: "title");
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.alert {
+  color: map-get($map: map-get($themes, "light"), $key: "title");
+
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+
+  &.error,
+  &.no-image {
+    > .icon {
+      font-size: 2em;
+    }
+  }
+}
+
+#categories,
+#sub-categories {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  width: 100%;
+  text-align: center;
+
+  > .category,
+  > .sub-category {
+    flex: 1 2 calc(25% - 2em); /* explanation below */
+    padding: 15px 30px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1em 1em;
+
+    cursor: pointer;
+    background-color: white;
+    color: #333;
+    border-radius: 6px;
+    color: map-get($map: map-get($themes, "light"), $key: "title");
+    font-weight: bold;
+    box-shadow: 0 3px 3px rgb(0, 0, 0, 0.1);
+
+    &.active {
+      background: rgb(9, 64, 198);
+      background: linear-gradient(
+        145deg,
+        rgba(9, 64, 198, 1) 0%,
+        rgba(82, 36, 199, 1) 75%,
+        rgba(165, 4, 200, 1) 100%
+      );
+      color: white;
+    }
+  }
+}
+
+#categories {
+  margin: 20px 0;
+}
+
+#sub-categories {
+  background-color: #d7d4e4;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 25px 0;
+
+  > .sub-category {
+    border-radius: 18px;
+  }
+}
+
+#images {
+  margin: 25px 0;
+}
+
+.hidden {
+  display: none !important;
+}
+/* purgecss end ignore */
+
+.skeleton-box {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+  background-color: #d7d4e4;
+  border-radius: 10px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(#e8e6f3, 0) 0,
+      rgba(#e8e6f3, 0.2) 20%,
+      rgba(#e8e6f3, 0.5) 60%,
+      rgba(#e8e6f3, 0)
+    );
+    animation: shimmer 2s infinite;
+    content: "";
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.grid {
+  line-height: 0;
+  column-count: 4;
+  column-gap: 40px;
+
+  > .image {
+    margin-bottom: 40px;
+    width: 100% !important;
+    height: auto !important;
+
+    > img {
+      border-radius: 10px;
+      filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+    }
+  }
+}
+
+footer {
+  background-color: #eae8f5;
+
+  > p {
+    text-align: center;
+    margin: 0;
+
+    padding: 20px;
+  }
+}
+
+a {
+  color: rgb(9, 64, 198);
+}
