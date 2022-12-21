@@ -483,6 +483,13 @@ a {
 @media (max-width:990px) {
   .about-me {
     width: 100%;
+
+    
+    .section-image {
+      width: 100% !important;
+      padding-left: 40px !important;
+      padding-right: 40px !important;
+    } 
     
     > .section-content {
       width: 100%;
